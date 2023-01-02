@@ -16,7 +16,7 @@ export const ContactList = () => {
   return (
     <ContactListStyled>
       {filterContacts.map(({ id, name, number }) => (
-        <ContactListItem key={id} name={name} number={number}></ContactListItem>
+        <ContactListItem key={id} name={name} number={number} id={id}></ContactListItem>
       ))}
     </ContactListStyled>
   );

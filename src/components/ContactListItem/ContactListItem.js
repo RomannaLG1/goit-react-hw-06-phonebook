@@ -11,6 +11,8 @@ import { deleteContacts } from 'redux/contactsSlice';
 
 export const ContactListItem = ({id, name, number }) => {
   const dispatch = useDispatch();
+  console.log(id);
+  console.log(name);
   return (
   <ListItemStyled>
     <ItemLink>
