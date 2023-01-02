@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { Form, Field, ErrorMessage } from 'formik';
 
 export const FormStyled = styled(Form)`
-width: 700px;
+width: 300px;
  display: flex;
  justify-content: center;
-gap: 10px;
+gap: 35px;
   flex-direction: column;
 margin: ${p => p.theme.space[4]}px;
 
@@ -45,13 +45,22 @@ text-transform: capitalize;
 }
 `;
 
-export const ErrorMsg = styled(ErrorMessage)`
+export const ErrorMsgName = styled(ErrorMessage)`
+position: absolute;
+top: 103px;
+left: 83px;
 color: ${p => p.theme.colors.warning};
 font-size: ${p => p.theme.fontSizes[6]};
 
 
+`;
 
-
+export const ErrorMsgPhone = styled(ErrorMessage)`
+position: absolute;
+top: 176px;
+left: 17px;
+color: ${p => p.theme.colors.warning};
+font-size: ${p => p.theme.fontSizes[6]};
 `;
 export const FormBtn = styled.button`
 width: 130px;
@@ -60,16 +69,17 @@ justify-content: space-between;
 align-items: center;
 color: ${p => p.theme.colors.primary};
   background-color: transparent;
-  /* margin-top: ${p => p.theme.space[4]}px; */
   padding: ${p => p.theme.space[3]}px;
   /* border: 2px solid ${p => p.theme.colors.primary}; */
   border: ${p => p.theme.borders.none};
   border-radius: ${p => p.theme.radii.medium};
   transition: color 250ms linear, background-color 250ms linear;
-  &:hover{
+  &:hover,
+  &:focus{
     cursor: pointer;
     background-color: ${p => p.theme.colors.accent};
     color: ${p => p.theme.colors.text};
     border: ${p => p.theme.borders.none};
+    outline: none;
   }
 `;

@@ -1,7 +1,9 @@
 import styled from 'styled-components'
-import { color, space, layout, flexbox, grid } from 'styled-system'
+import { color, space, layout, border, flexbox, grid } from 'styled-system'
 
-const Box = styled('div')(color, space, layout, flexbox, grid);
+const Box = styled('div')(color, border, space, layout, flexbox, grid);
 
 
 export default Box;
+
+

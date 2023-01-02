@@ -1,7 +1,8 @@
 import { AiOutlinePlus } from 'react-icons/ai';
 import { Formik } from 'formik';
 import {
-  ErrorMsg,
+  ErrorMsgName,
+  ErrorMsgPhone,
   FormBtn,
   FormStyled,
   Input,
@@ -62,13 +63,13 @@ export const ContactForm = () => {
         <Label htmlFor="name">
           <BsPersonSquare size="30" />
           <Input type="text" name="name" placeholder="Name" autocomplite="on" />
-          <ErrorMsg name="name" component="div" />
+          <ErrorMsgName name="name" component="div" />
         </Label>
 
         <Label htmlFor="tel">
           <BsTelephoneForwardFill size="30" />
           <Input type="tel" name="number" placeholder="Phone" />
-          <ErrorMsg name="number" component="span" />
+          <ErrorMsgPhone name="number" component="span" />
         </Label>
         <FormBtn type="submit">
           <AiOutlinePlus size="30" />
