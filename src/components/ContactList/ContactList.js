@@ -6,6 +6,7 @@ import { getContacts, getFilters } from 'redux/selectors';
 
 export const ContactList = () => {
   const contacts = useSelector(getContacts);
+  console.log(contacts);
   const filterName = useSelector(getFilters);
   const toNormalizedFilter = filterName.toLowerCase();
   const filterContacts = contacts.filter(contact =>
